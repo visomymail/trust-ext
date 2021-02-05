@@ -1,4 +1,4 @@
-import { listen } from "./listener";
+import { listenMessages } from "./messanger";
 import { state } from './state';
 
-listen(state);
+listenMessages(state);
