@@ -1,4 +1,6 @@
-import { listenMessages } from "./messanger";
+import { listenMessages } from '../../utils/messenger';
+import { listener } from './listener';
 import { state } from './state';
+import { BackgroundStateType } from './types/state.types';
 
-listenMessages(state);
+listenMessages<BackgroundStateType>(state, listener);
