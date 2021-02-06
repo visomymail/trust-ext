@@ -5,7 +5,7 @@ import { PopupStateType } from "./types/state.types";
 
 declare const switcher: HTMLButtonElement;
 
-export function listener(message: MessageType, state: PopupStateType): void {
+export function listener<T>(message: MessageType<T>, state: PopupStateType): void {
     switch(message.channel) {
         
     };

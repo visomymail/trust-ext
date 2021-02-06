@@ -6,7 +6,7 @@ export function changeState<T>(state: T, key: keyof T, value: any): T {
     return state;
 };
 
-export function sync(callback: any, ...args: any): Promise<void> {
+export function sync(callback: any, ...args: any): Promise<any> {
     return new Promise(resolve => {
         callback(...args, resolve);
     });

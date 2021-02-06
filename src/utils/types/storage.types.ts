@@ -1,0 +1,1 @@
+export type CallbackResolveType = (param: any) => void;

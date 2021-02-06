@@ -3,4 +3,4 @@ import { listener } from "./listener";
 import { state } from "./state";
 import { PopupStateType } from "./types/state.types";
 
-listenMessages<PopupStateType>(state, listener);
+listenMessages<PopupStateType, any>(state, listener);

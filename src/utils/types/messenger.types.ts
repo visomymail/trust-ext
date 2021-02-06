@@ -1,8 +1,16 @@
 import { Channels } from "../channels";
 
-export type MessageType = {
+export type MessageType<T> = {
     channel: Channels;
-    playload?: any;
+    playload?: T;
 };
 
-export type CallbackListenerType<T> = (message: MessageType, state: T) => void;
+export type InitBackgroundPlayloadMessageType = {
+    queryStringParams: string;
+    isAuthMail: boolean;
+    isApplyFiltersMail: boolean;
+};
+
+export type BackgroundPlayloadMessageListenerTypes = InitBackgroundPlayloadMessageType;
+
+export type CallbackListenerType<T, K> = (message: MessageType<K>, state: T) => void;
