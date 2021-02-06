@@ -1,5 +1,4 @@
 import { Channels } from "../../utils/channels";
-import { sendMessageRuntime } from "../../utils/messenger";
 import { BackgroundPlayloadMessageListenerTypes, InitBackgroundPlayloadMessageType, MessageType } from "../../utils/types/messenger.types";
 import { init } from "./init";
 import { BackgroundStateType } from "./types/state.types";

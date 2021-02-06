@@ -7,8 +7,6 @@ export type MessageType<T> = {
 
 export type InitBackgroundPlayloadMessageType = {
     queryStringParams: string;
-    isAuthMail: boolean;
-    isApplyFiltersMail: boolean;
 };
 
 export type BackgroundPlayloadMessageListenerTypes = InitBackgroundPlayloadMessageType;
