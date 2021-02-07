@@ -6,6 +6,6 @@ import { BackgroundStateType } from "./types/state.types";
 export function listener(message: MessageType<BackgroundPlayloadMessageListenerTypes>, state: BackgroundStateType): void {
     switch(message.channel) {
         case Channels.INIT_BACKGROUND_SCRIPT: 
-            init(<InitBackgroundPlayloadMessageType>message.playload);    
+            init(<InitBackgroundPlayloadMessageType>message.playload, state);    
     };
 };

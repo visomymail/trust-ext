@@ -12,6 +12,6 @@ window.onload = () => {
     window.location.host === 'localhost:3000' && init();
 
     sendMessageRuntime({
-        channel: Channels.PAGE_LOADED
+        channel: Channels.CONTENT_PAGE_LOADED
     });
 };

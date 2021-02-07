@@ -1,6 +1,6 @@
 export enum Channels {
     GET_PAUSE_STATUS,
     SET_PAUSE_STATUS,
-    PAGE_LOADED,
+    CONTENT_PAGE_LOADED,
     INIT_BACKGROUND_SCRIPT
 };
