@@ -4,5 +4,10 @@ export const state: BackgroundStateType = {
     isPause: false,
     IP: undefined,
     proxies: [],
-    userAgents: []
+    userAgents: [],
+    queryStringData: {
+        login: undefined,
+        password: undefined,
+        thread: undefined
+    }
 };

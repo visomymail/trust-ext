@@ -12,11 +12,6 @@ export function sync(callback: any, ...args: any): Promise<any> {
     });
 };
 
-export enum ResponseCodes {
-    OK_GET_GOOD_RESPONSE = 200,
-    OK_POST_GOOD_RESPONSE = 201,
-    ERROR_NOT_AUTH_RESPONSE = 401,
-    ERROR_BAD_REQUEST_RESPONSE = 400,
-    ERROR_FORBIDDEN_RESPONSE = 403,
-    ERROR_NOT_FOUND_RESPONSE = 404,
+export function parseURIPathnameBySymbol(symbol: string): string[] {
+    return window.location.pathname.replace(/\//g, '').split(symbol);
 };

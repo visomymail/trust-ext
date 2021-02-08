@@ -1,11 +1,11 @@
-import { InitBackgroundPlayloadMessageType } from "../../utils/types/messenger.types";
+import { stat } from "fs/promises";
 import { changeState } from "../../utils/union";
-import { getIPOfCurrentMachine, getUserAgentsByIP } from "../api/get";
-import { BackgroundStateType } from "./types/state.types";
+import { getIPOfCurrentMachine, getProxiesByIP, getUserAgentsByIP } from "../api/get";
+import { BackgroundStateType, QueryStringDataType } from "./types/state.types";
 
-export async function init(data: InitBackgroundPlayloadMessageType, state: BackgroundStateType): Promise<void> {
-    const [login, password, thread]: string[] = data.queryStringParams.split(';');
-
-    changeState<BackgroundStateType>(state, 'IP', (await getIPOfCurrentMachine()).IP);
-    changeState<BackgroundStateType>(state, 'userAgents', (await getUserAgentsByIP(state.IP)).agents);
+export async function init(queryStringData: QueryStringDataType, state: BackgroundStateType): Promise<void> {
+    changeState<BackgroundStateType>(state, 'IP', await getIPOfCurrentMachine());
+    changeState<BackgroundStateType>(state, 'userAgents', await getUserAgentsByIP(state.IP));
+    changeState<BackgroundStateType>(state, 'proxies', await getProxiesByIP(state.IP));
+    changeState<BackgroundStateType>(state, 'queryStringData', queryStringData);
 };

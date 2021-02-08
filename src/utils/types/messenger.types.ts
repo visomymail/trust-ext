@@ -1,3 +1,4 @@
+import { QueryStringDataType } from "../../extension/background/types/state.types";
 import { Channels } from "../channels";
 
 export type MessageType<T> = {
@@ -6,7 +7,7 @@ export type MessageType<T> = {
 };
 
 export type InitBackgroundPlayloadMessageType = {
-    queryStringParams: string;
+    queryStringParams: QueryStringDataType;
 };
 
 export type BackgroundPlayloadMessageListenerTypes = InitBackgroundPlayloadMessageType;
