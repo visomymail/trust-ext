@@ -7,7 +7,10 @@ export type QueryStringDataType = {
 export type BackgroundStateType = {
     isPause: boolean;
     IP: string | undefined;
+    answers: string[];
+    subjects: string[];
     userAgents: string[];
     proxies: string[];
+    mails: string[];
     queryStringData: QueryStringDataType;
 };

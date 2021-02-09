@@ -1,5 +1,5 @@
 import { API_REMOTE_PATH_URI } from "../../utils/constants";
-import { GetIpOfCurrentMachineResponseType, GetProxiesByIPResponseType, GetUserAgentsByIPResponseType } from "./types/get.types";
+import { GetAnswersByIPResponseType, GetIpOfCurrentMachineResponseType, GetMailsByIPResponseType, GetProxiesByIPResponseType, GetSubjectsByIPResponseType, GetUserAgentsByIPResponseType } from "./types/get.types";
 
 async function GET<T>(action: string, bearer: string = 'undefind'): Promise<T> {
     const result = await fetch(`${API_REMOTE_PATH_URI}?action=${action}`, {
@@ -26,4 +26,16 @@ export async function getUserAgentsByIP(bearer: string): Promise<string[]> {
 
 export async function getProxiesByIP(bearer: string): Promise<string[]> {
     return (await GET<GetProxiesByIPResponseType>('get_proxies', bearer)).proxies;
+};
+
+export async function getMailsByIP(bearer: string): Promise<string[]>{
+    return (await GET<GetMailsByIPResponseType>('get_mails', bearer)).mails;  
+};
+
+export async function getAnswersByIP(bearer: string): Promise<string[]>{
+    return (await GET<GetAnswersByIPResponseType>('get_answers', bearer)).answers;  
+};
+
+export async function getSubjectsByIP(bearer: string): Promise<string[]>{
+    return (await GET<GetSubjectsByIPResponseType>('get_subjects', bearer)).subjects;  
 };
