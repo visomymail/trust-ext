@@ -1,0 +1,24 @@
+2020/11/10-02:43:57.793 19b8 Reusing MANIFEST C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Profile 3\Session Storage/MANIFEST-000001
+2020/11/10-02:43:57.796 19b8 Recovering log #1841
+2020/11/10-02:43:57.798 19b8 Reusing old log C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Profile 3\Session Storage/001841.log 
+2020/11/10-02:47:39.241 180c Level-0 table #1844: started
+2020/11/10-02:47:39.250 180c Level-0 table #1844: 15257 bytes OK
+2020/11/10-02:47:39.255 180c Delete type=0 #1841
+2020/11/10-02:48:39.226 11c8 Level-0 table #1846: started
+2020/11/10-02:48:39.284 11c8 Level-0 table #1846: 15046 bytes OK
+2020/11/10-02:48:39.288 11c8 Delete type=0 #1843
+2020/11/10-02:50:39.222 180c Level-0 table #1848: started
+2020/11/10-02:50:39.241 180c Level-0 table #1848: 20349 bytes OK
+2020/11/10-02:50:39.244 180c Delete type=0 #1845
+2020/11/10-02:50:39.246 11c8 Compacting 4@0 + 1@1 files
+2020/11/10-02:50:39.264 11c8 Generated table #1849@0: 4896 keys, 92073 bytes
+2020/11/10-02:50:39.264 11c8 Compacted 4@0 + 1@1 files => 92073 bytes
+2020/11/10-02:50:39.265 11c8 compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/11/10-02:50:39.268 11c8 Delete type=2 #1839
+2020/11/10-02:50:39.268 11c8 Delete type=2 #1841
+2020/11/10-02:50:39.268 11c8 Delete type=2 #1844
+2020/11/10-02:50:39.268 11c8 Delete type=2 #1846
+2020/11/10-02:50:39.269 11c8 Delete type=2 #1848
+2020/11/10-03:03:33.414 9f4 Level-0 table #1851: started
+2020/11/10-03:03:33.420 9f4 Level-0 table #1851: 25041 bytes OK
+2020/11/10-03:03:33.426 9f4 Delete type=0 #1847

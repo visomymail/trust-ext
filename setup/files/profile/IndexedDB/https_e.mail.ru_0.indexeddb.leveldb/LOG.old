@@ -1,0 +1,15 @@
+2020/11/10-02:48:24.133 1964 Reusing MANIFEST C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Profile 3\IndexedDB\https_e.mail.ru_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/10-02:48:24.134 1964 Recovering log #2083
+2020/11/10-02:48:24.135 1964 Reusing old log C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Profile 3\IndexedDB\https_e.mail.ru_0.indexeddb.leveldb/002083.log 
+2020/11/10-02:49:17.856 1e68 Level-0 table #2088: started
+2020/11/10-02:49:17.860 1e68 Level-0 table #2088: 2211 bytes OK
+2020/11/10-02:49:17.864 1e68 Delete type=0 #2083
+2020/11/10-02:49:17.865 1e68 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/11/10-02:49:17.865 1e68 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x1f\x01\x07\x00d\x00e\x00f\x00a\x00u\x00l\x00t\x00\x01\x07\x00d\x00e\x00f\x00a\x00u\x00l\x00t' @ 51741 : 1
+2020/11/10-02:49:17.866 1e68 Compacting 1@1 + 1@2 files
+2020/11/10-02:49:17.871 1e68 Generated table #2089@1: 54 keys, 1510 bytes
+2020/11/10-02:49:17.871 1e68 Compacted 1@1 + 1@2 files => 1510 bytes
+2020/11/10-02:49:17.877 1e68 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/11/10-02:49:17.877 1e68 Delete type=2 #2085
+2020/11/10-02:49:17.877 1e68 Delete type=2 #2088
+2020/11/10-02:49:17.878 1e68 Manual compaction at level-1 from '\x00\x01\x01\x1f\x01\x07\x00d\x00e\x00f\x00a\x00u\x00l\x00t\x00\x01\x07\x00d\x00e\x00f\x00a\x00u\x00l\x00t' @ 51741 : 1 .. (end); will stop at (end)

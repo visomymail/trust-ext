@@ -1,0 +1,8 @@
+2020/11/10-02:52:12.175 1f10 Reusing MANIFEST C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Profile 3\IndexedDB\https_calls.mail.ru_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/10-02:52:12.176 1f10 Recovering log #9022
+2020/11/10-02:52:12.177 1f10 Reusing old log C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Profile 3\IndexedDB\https_calls.mail.ru_0.indexeddb.leveldb/009022.log 
+2020/11/10-02:52:30.955 1f0c Level-0 table #9026: started
+2020/11/10-02:52:30.956 1f0c Level-0 table #9026: 0 bytes OK
+2020/11/10-02:52:31.044 1f0c Delete type=0 #9022
+2020/11/10-02:52:31.044 1f0c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/11/10-02:52:31.044 1f0c Manual compaction at level-1 from (begin) .. (end); will stop at (end)

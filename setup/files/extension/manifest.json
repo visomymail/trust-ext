@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "trust-ext",
+    "description": "an extension to read some mail.",
+    "version": "1.0.0",
+    "icons": {
+        "128": "logo.png"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "browser_action": {
+      "default_popup": "popup.html",
+	  "default_title": "Mail reader", 
+      "default_icon": "logo.png"
+    },
+    "permissions": [
+		"tabs", 
+		"activeTab",
+		"proxy",
+		"storage", 
+		"<all_urls>", 
+		"webRequest", 
+		"webRequestBlocking"
+	]
+}

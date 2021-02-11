@@ -21,7 +21,7 @@ export async function getIPOfCurrentMachine(): Promise<string> {
 };
 
 export async function getUserAgentsByIP(bearer: string): Promise<string[]> {
-    return await (await GET<GetUserAgentsByIPResponseType>('get_agents', bearer)).agents;
+    return (await GET<GetUserAgentsByIPResponseType>('get_agents', bearer)).agents;
 };
 
 export async function getProxiesByIP(bearer: string): Promise<string[]> {

@@ -1,21 +1,28 @@
+import { DOM } from "../../../utils/DOM";
 import { delay } from "../../../utils/union";
 
 export namespace Mail {
     export async function auth(login: string, password: string): Promise<void> {
         try {
             delay(2500);
-            (globalThis.document.querySelector('input[name*="login"]') as HTMLInputElement).value = login;
-            globalThis.document.querySelector('input[name*="login"]').dispatchEvent(new Event('input'));
+            const inputLoginElement: HTMLInputElement = DOM.selectOnce<HTMLInputElement>('input[name*="login"]');
+            inputLoginElement.value = login;
+            inputLoginElement.dispatchEvent(new Event('input'));
             delay(1000);
             
-            (globalThis.document.querySelector('button[type="button"]') as HTMLButtonElement).click();
+            DOM.selectOnce<HTMLButtonElement>('button[type="button"]').click();
             delay(1000);
             
-            (globalThis.document.querySelector('input[name*="password"]')  as HTMLInputElement).value = password;
-            globalThis.document.querySelector('input[name*="password"]').dispatchEvent(new Event('input'));
+            const inputPasswordElement: HTMLInputElement = DOM.selectOnce<HTMLInputElement>('input[name*="password"]');
+            inputPasswordElement.value = password;
+            inputPasswordElement.dispatchEvent(new Event('input'));
             delay(1000);
             
-            (globalThis.document.querySelectorAll('button[type="button"]')[1] as HTMLButtonElement).click();	
+            DOM.selectAll<HTMLButtonElement>('button[type="button"]')[1].click();	
         } catch (e) { throw new Error('Mail auth error. Message: ' + e.message); }
+    };
+
+    export async function upSpam(isUpSpamAllDomains: boolean, allowedDomains: string[]): Promise<void> {
+       
     };
 };
