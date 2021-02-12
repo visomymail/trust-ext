@@ -1,5 +1,5 @@
-FILENAME="trust"
-COMPILER_ROOT="Inno Setup 6/ISCC.exe"
+PY_FILENAME="trust"
+COMPILER_ROOT="Inno Setup 6/"
 
 # Build extension
 cd ./../ && npm run build && cd ./scripts
@@ -12,12 +12,12 @@ pip install requests
 pip install colorama
 
 # Convert .py to .exe
-pyinstaller $FILENAME.py -F -n $FILENAME
+pyinstaller ./../src/initiator/main.py -F -n $PY_FILENAME
 
 # Move py.exe to setup folder
-mv "./dist/$FILENAME.exe" "../setup/files"
+mv "./dist/$PY_FILENAME.exe" "../setup/files"
 
 # Remove compiled data
-rm -rf dist __pycache__ build $FILENAME.spec
+rm -rf dist __pycache__ build $PY_FILENAME.spec
 
 # Compile installer
