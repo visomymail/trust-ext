@@ -1,4 +1,4 @@
-import { API_REMOTE_PATH_URI } from "../../utils/constants";
+import { API_REMOTE_PATH_URI } from "../utils/constants";
 import { GetAnswersByIPResponseType, GetIpOfCurrentMachineResponseType, GetMailsByIPResponseType, GetProxiesByIPResponseType, GetSubjectsByIPResponseType, GetUserAgentsByIPResponseType } from "./types/get.types";
 
 async function GET<T>(action: string, bearer: string = 'undefind'): Promise<T> {

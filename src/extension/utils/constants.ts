@@ -1,4 +1,4 @@
-import { PostHeaderType } from "../extension/api/types/post.types";
+import { PostHeaderType } from "../api/types/post.types";
 
 export const DEFAULT_POST_HEADERS: PostHeaderType = {
     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'

@@ -1,5 +1,5 @@
-import { Channels } from "../../utils/channels";
-import { BackgroundPlayloadMessageListenerTypes, MessageType } from "../../utils/types/messenger.types";
+import { Channels } from "../utils/channels";
+import { BackgroundPlayloadMessageListenerTypes, MessageType } from "../utils/types/messenger.types";
 import { init } from "./init";
 import { BackgroundStateType, QueryStringDataType } from "./types/state.types";
 

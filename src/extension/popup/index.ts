@@ -1,4 +1,4 @@
-import { listenMessages } from '../../utils/messenger';
+import { listenMessages } from '../utils/messenger';
 import { listener } from "./listener";
 import { state } from "./state";
 import { PopupStateType } from "./types/state.types";

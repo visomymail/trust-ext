@@ -1,5 +1,5 @@
 import { type } from "os";
-import { QueryStringDataType } from "../../extension/background/types/state.types";
+import { QueryStringDataType } from "../../background/types/state.types";
 import { Channels } from "../channels";
 
 export type MessageType<T> = {

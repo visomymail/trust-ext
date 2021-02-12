@@ -1,6 +1,6 @@
-import { Channels } from '../../utils/channels';
-import { listenMessages, sendMessageRuntime } from '../../utils/messenger';
-import { ContentPlayloadMessageListenerTypes } from '../../utils/types/messenger.types';
+import { Channels } from '../utils/channels';
+import { listenMessages, sendMessageRuntime } from '../utils/messenger';
+import { ContentPlayloadMessageListenerTypes } from '../utils/types/messenger.types';
 import { init } from './init';
 import { listener } from "./listener";
 import { state } from "./state";

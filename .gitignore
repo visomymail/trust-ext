@@ -2,4 +2,7 @@ node_modules/
 build/
 
 # that fills after build command; add /profile by youself
-setup/files
+/setup/files
+
+.pyc
+__pycache__/

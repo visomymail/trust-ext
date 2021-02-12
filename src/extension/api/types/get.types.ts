@@ -1,4 +1,4 @@
-import { ResponseCodes } from "../../../utils/codes";
+import { ResponseCodes } from "../../utils/codes";
 
 export type GetIpOfCurrentMachineResponseType = {
     status: ResponseCodes;

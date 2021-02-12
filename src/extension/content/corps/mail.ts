@@ -1,5 +1,5 @@
-import { DOM } from "../../../utils/DOM";
-import { delay } from "../../../utils/union";
+import { DOM } from "../../utils/DOM";
+import { delay } from "../../utils/union";
 
 export namespace Mail {
     export async function auth(login: string, password: string): Promise<void> {
