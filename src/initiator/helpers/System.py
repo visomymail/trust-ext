@@ -4,6 +4,9 @@ from os import path
 from datetime import datetime
 from subprocess import Popen, PIPE
 
+from Utils import Utils
+
+
 class System:
     @staticmethod
     def is_folder_exists(path_folder: str) -> bool:
@@ -27,4 +30,5 @@ class System:
 
     @staticmethod
     def open_browser(profile: str, data: str, thread: int, active_processes: dict) -> None:
-        active_processes[f'thread{thread}'] = Popen(fr'"C:\Program Files\Google\Chrome\Application\chrome.exe" {data} --disk-cache-dir=C:\Cache --start-maximized --profile-directory={profile}', stdout=PIPE)
+        active_processes[f'thread{thread}'] = \
+            Popen(f'{Utils.get_path_to_chrome_exe()} {data} {Utils.get_init_chrome_params(profile)}', stdout=PIPE)

@@ -2,9 +2,10 @@ from constants import HEADERS_POST_REQUEST, API_REMOTE_URI
 
 import requests
 
+
 class API:
     '''
-    @X-Auth-Bearer[requred] - token (IP);
+    @X-Auth-Bearer - is a requiered param (IP);
     ResponseSchema: {status: *code*, {*data*}}
     '''
 
