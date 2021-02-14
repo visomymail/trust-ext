@@ -2,18 +2,17 @@ import { API_REMOTE_PATH_URI } from "../utils/constants";
 import { GetAnswersByIPResponseType, GetIpOfCurrentMachineResponseType, GetMailsByIPResponseType, GetProxiesByIPResponseType, GetSubjectsByIPResponseType, GetUserAgentsByIPResponseType } from "./types/get.types";
 
 async function GET<T>(action: string, bearer: string = 'undefind'): Promise<T> {
-    const result = await fetch(`${API_REMOTE_PATH_URI}?action=${action}`, {
+    const response = await fetch(`${API_REMOTE_PATH_URI}?action=${action}`, {
         method: 'GET',
         headers: {
             'X-Auth-Bearer': bearer
         }
     });
-    const response = await result.json();
 
     if (response.status !== 200) 
     throw new Error(`Bad request. Action: ${action}. Status: ${response.status}.`);
 
-    return response;
+    return await response.json();
 };
 
 export async function getIPOfCurrentMachine(): Promise<string> {

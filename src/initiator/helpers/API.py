@@ -25,19 +25,19 @@ class API:
         return self.session.get(f'{API_REMOTE_URI}?action=get_settings').json()
 
     def get_proxies(self) -> dict:
-        return self.session.get(f'{API_REMOTE_URI}?action=get_proxies').json()
+        return self.session.get(f'{API_REMOTE_URI}?action=get_proxies').json()['proxies']
 
     def get_agents(self) -> dict:
-        return self.session.get(f'{API_REMOTE_URI}?action=get_agents').json()
+        return self.session.get(f'{API_REMOTE_URI}?action=get_agents').json()['agents']
         
-    def get_accounts(self) -> dict:
-        return self.session.get(f'{API_REMOTE_URI}?action=get_accounts').json()
+    def get_adresses(self) -> dict:
+        return self.session.get(f'{API_REMOTE_URI}?action=get_adresses').json()
 
-    def get_controlls(self) -> dict:
+    def get_controls(self) -> dict:
         return self.session.get(f'{API_REMOTE_URI}?action=get_controlls').json()
 
-    def get_status_script(self) -> dict:
-        return self.session.get(f'{API_REMOTE_URI}?action=get_status_script').json()
+    def get_status_script(self, thread: int) -> dict:
+        return self.session.get(f'{API_REMOTE_URI}?action=get_status_script&thread={thread}').json()
 
     def get_bad_mails(self) -> list:
         return self.session.get(f'{API_REMOTE_URI}?action=get_bad_mails').json()
