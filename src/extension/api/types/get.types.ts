@@ -7,25 +7,25 @@ export type GetIpOfCurrentMachineResponseType = {
 
 export type GetUserAgentsByIPResponseType = {
     status: ResponseCodes,
-    agents: string[];
+    agents: string;
 };
 
 export type GetProxiesByIPResponseType = {
     status: ResponseCodes,
-    proxies: string[];
+    proxies: string;
 };
 
 export type GetMailsByIPResponseType = {
     status: ResponseCodes,
-    mails: string[];
+    mails: string;
 };
 
 export type GetSubjectsByIPResponseType = {
     status: ResponseCodes,
-    subjects: string[];
+    subjects: string;
 };
 
 export type GetAnswersByIPResponseType = {
     status: ResponseCodes,
-    answers: string[];
+    answers: string;
 };

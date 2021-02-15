@@ -12,5 +12,6 @@ export type BackgroundStateType = {
     userAgents: string[];
     proxies: string[];
     mails: string[];
+    isContentScriptDone: boolean;
     queryStringData: QueryStringDataType;
 };

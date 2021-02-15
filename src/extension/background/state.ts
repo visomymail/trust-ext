@@ -8,6 +8,7 @@ export const state: BackgroundStateType = {
     answers: [],
     mails: [],
     userAgents: [],
+    isContentScriptDone: false,
     queryStringData: {
         login: undefined,
         password: undefined,

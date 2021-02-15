@@ -11,19 +11,27 @@ export type InitBackgroundPlayloadMessageType = {
     queryStringParams: QueryStringDataType;
 };
 
-export type BackgroundPlayloadMessageListenerTypes = InitBackgroundPlayloadMessageType;
 
 export type MakeMailAuthPlayloadMessageType = {
     login: string;
     password: string;
 };
 
-export type ContentPlayloadMessageListenerTypes = MakeMailAuthPlayloadMessageType;
 
 export type SetPauseStatusPlayloadMessageType = {
     isPause: boolean;
 };
 
+export type SetContentScriptStatusPlayloadMessage = {
+    isContentScriptDone: boolean;
+};
+
 export type PopupPlayloadMessageListenerTypes = SetPauseStatusPlayloadMessageType;
+
+export type BackgroundPlayloadMessageListenerTypes = InitBackgroundPlayloadMessageType & 
+                                                     SetPauseStatusPlayloadMessageType &
+                                                     SetContentScriptStatusPlayloadMessage;
+
+export type ContentPlayloadMessageListenerTypes = MakeMailAuthPlayloadMessageType;
 
 export type CallbackListenerType<T, K> = (message: MessageType<K>, state: T) => void;

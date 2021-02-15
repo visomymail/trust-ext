@@ -20,21 +20,21 @@ export async function getIPOfCurrentMachine(): Promise<string> {
 };
 
 export async function getUserAgentsByIP(bearer: string): Promise<string[]> {
-    return (await GET<GetUserAgentsByIPResponseType>('get_agents', bearer)).agents;
+    return (await GET<GetUserAgentsByIPResponseType>('get_agents', bearer)).agents.split('\n');
 };
 
 export async function getProxiesByIP(bearer: string): Promise<string[]> {
-    return (await GET<GetProxiesByIPResponseType>('get_proxies', bearer)).proxies;
+    return (await GET<GetProxiesByIPResponseType>('get_proxies', bearer)).proxies.split('\n');
 };
 
 export async function getMailsByIP(bearer: string): Promise<string[]>{
-    return (await GET<GetMailsByIPResponseType>('get_mails', bearer)).mails;  
+    return (await GET<GetMailsByIPResponseType>('get_mails', bearer)).mails.split('\n');  
 };
 
 export async function getAnswersByIP(bearer: string): Promise<string[]>{
-    return (await GET<GetAnswersByIPResponseType>('get_answers', bearer)).answers;  
+    return (await GET<GetAnswersByIPResponseType>('get_answers', bearer)).answers.split('\n');  
 };
 
 export async function getSubjectsByIP(bearer: string): Promise<string[]>{
-    return (await GET<GetSubjectsByIPResponseType>('get_subjects', bearer)).subjects;  
+    return (await GET<GetSubjectsByIPResponseType>('get_subjects', bearer)).subjects.split('\n');  
 };
