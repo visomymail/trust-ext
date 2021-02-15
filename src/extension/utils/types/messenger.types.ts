@@ -20,4 +20,10 @@ export type MakeMailAuthPlayloadMessageType = {
 
 export type ContentPlayloadMessageListenerTypes = MakeMailAuthPlayloadMessageType;
 
+export type SetPauseStatusPlayloadMessageType = {
+    isPause: boolean;
+};
+
+export type PopupPlayloadMessageListenerTypes = SetPauseStatusPlayloadMessageType;
+
 export type CallbackListenerType<T, K> = (message: MessageType<K>, state: T) => void;

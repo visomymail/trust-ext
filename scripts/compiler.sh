@@ -21,3 +21,4 @@ mv "./dist/$PY_FILENAME.exe" "../setup/files"
 rm -rf dist __pycache__ build $PY_FILENAME.spec
 
 # Compile installer
+$COMPILER_ROOT/ISCC.exe ./../setup/cfg/compil.config.iss

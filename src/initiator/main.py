@@ -8,6 +8,7 @@ import time
 
 from colorama import Fore
 from threading import Thread
+from random import choice, shuffle
 
 
 class State:
@@ -60,9 +61,9 @@ def start_ext(account: str, thread: int, settings: dict, settapi) -> None:
             if account == account_in_list:
                 del State.current_list_accounts[index]
                 break
-        except: pass
-        finally:
-            State.threads[f'thread{thread}'] = 'free'
+    except: pass
+    finally:
+        State.threads[f'thread{thread}'] = 'free'
 
 def main() -> None:
     try:
@@ -88,24 +89,25 @@ def main() -> None:
                 State.current_list_accounts.append(account)
                 State.threads[f'thread{thread + 1}'] = 'use'
                 Thread(target=start_ext, args=(account, thread + 1, settings, api)).start()
-                print(Fore.GREEN + f'[{get_time("%H:%M:%S")}] запустил бразуер. данные: {account} поток: {thread + 1}');
+                print(Fore.GREEN + f'[{System.get_time("%H:%M:%S")}] запустил бразуер. данные: {account} поток: {thread + 1}')
             
             # wait for free some thread
             while True:
-                print(Fore.YELLOW + f'[{get_time("%H:%M:%S")}] жду освобождения потоков: {Main.threads.values()}'); sleep(5)
+                print(Fore.YELLOW + f'[{System.get_time("%H:%M:%S")}] жду освобождения потоков: {State.threads.values()}')
+                time.sleep(5)
                 if not 'use' in State.threads.values():
                     break
             
-            System.close_browser(); sleep(5)
+            System.close_browser(); time.sleep(5)
             System.delete_folder(FOLDER_CACHE_PATH)
-            print(Fore.GREEN + f'[{get_time("%H:%M:%S")}] отключил браузеры && отчистил кеш')
+            print(Fore.GREEN + f'[{System.get_time("%H:%M:%S")}] отключил браузеры && отчистил кеш')
     except Exception as msg:
-        print(Fore.RED + f'[{get_time("%H:%M:%S")}] {msg}')
+        print(Fore.RED + f'[{System.get_time("%H:%M:%S")}] {msg}')
         time.sleep(15)
         main()
 
 if __name__ == "__main__":
-    Thread(target=Utils.hande_server, args=(,)).start()
+    Thread(target=Utils.hande_server, args=(3000,)).start()
     colorama.init()
     main()
 

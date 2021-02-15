@@ -18,7 +18,7 @@ class Utils:
         return 'C:\\trust\\files\\profile'
 
     @staticmethod
-    def hande_server() -> None:
+    def hande_server(port: int) -> None:
         from http.server import HTTPServer, SimpleHTTPRequestHandler
 
         class Handler(SimpleHTTPRequestHandler):
