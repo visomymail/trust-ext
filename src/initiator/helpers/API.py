@@ -1,4 +1,4 @@
-from constants import HEADERS_POST_REQUEST, API_REMOTE_URI
+from helpers.constants import HEADERS_POST_REQUEST, API_REMOTE_URI
 
 import requests
 
