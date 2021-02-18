@@ -1,3 +1,5 @@
+import { BackgroundStateType } from "../background/types/state.types";
+import { ContentStateType } from "../content/types/state.types";
 import { getRandomBetween } from "./math";
 
 export function changeState<T>(state: T, key: keyof T, value: any): T {
@@ -25,3 +27,24 @@ export function getRandomArrayElement(array: any[]): any {
 export async function delay(time: number): Promise<void> {
     await new Promise(resolve => setTimeout(resolve, time));
 };
+
+async function waitIfPause(isPause: boolean): Promise<void> {
+    while (isPause) {
+        await delay(1000);
+    }
+}
+
+export function actionContent(callback: () => void, state: ContentStateType): void {
+    waitIfPause(state.isPause);
+    callback();
+};
+
+export async function actionBackground(callback: () => void, state: BackgroundStateType): Promise<void> {
+    waitIfPause(state.isPause);
+
+    while (!state.isContentScriptDone) {
+        await delay(1000);
+    }
+
+    callback();
+}
